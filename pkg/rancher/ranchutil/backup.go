@@ -49,9 +49,6 @@ func CopyVolume(client *rancher.RancherClient, fromClusterName, toClusterName st
 			"-ec",
 			fmt.Sprintf("mkdir -p %[2]s; cp -r %[1]s/* %[2]s/", from, to),
 		},
-		RestartPolicy: &rancher.RestartPolicy{
-			Name: "never",
-		},
 		DataVolumes: []string{
 			strings.Join([]string{fromClusterName, fromDirMountDir, "ro"}, ":"),
 			strings.Join([]string{toClusterName, constants.BackupMountDir}, ":"),
