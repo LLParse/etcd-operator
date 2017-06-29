@@ -1,5 +1,0 @@
-name: Etcd2
-description: >
-  Distributed reliable key-value store for the most critical data of a distributed system
-version: v0.2.4-rancher
-category: Coordination
